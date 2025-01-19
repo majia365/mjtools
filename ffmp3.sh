@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #音乐音质
-best_quality="-ar 44100 -ac 2 -q:a 0"
+best_quality="-ar 48000 -ac 2 -q:a 0"
 low_quality="-ar 44100 -ac 2 -b:a 128k"
 medium_quality="-ar 44100 -ac 2 -b:a 192k"
 high_quality="-ar 44100 -ac 2 -b:a 320k"
