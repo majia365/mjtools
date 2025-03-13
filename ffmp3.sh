@@ -1,22 +1,25 @@
 #!/bin/sh
 
-#音乐音质
-best_quality="-ar 48000 -ac 2 -q:a 0"
-high_quality="-ar 44100 -ac 2 -b:a 320k"
-medium_quality="-ar 44100 -ac 2 -b:a 192k"
-low_quality="-ar 44100 -ac 2 -b:a 128k"
-#广播音质
-fm_quality="-ar 22050 -ac 1"
-am_quality="-ar 11025 -ac 1"
-
-default_quality=${best_quality}
+# 使用ffmpeg从视频mp4文件中抽取音频mp3
+#输入参数1: 输出音质
 
 #命令行帮助
 print_usage() {
     echo "usage: ffmp3.sh [quality]"
-    echo "\t quality: best/high/medium/low/fm/am"
+    echo "    quality: best/high/medium/low/fm/am"
     exit
 }
+
+#音乐音质参数
+best_quality="-ar 48000 -ac 2 -q:a 0"
+high_quality="-ar 44100 -ac 2 -b:a 320k"
+medium_quality="-ar 44100 -ac 2 -b:a 192k"
+low_quality="-ar 44100 -ac 2 -b:a 128k"
+#广播音质参数
+fm_quality="-ar 22050 -ac 1"
+am_quality="-ar 11025 -ac 1"
+
+default_quality=${best_quality}
 
 #检查命令行参数
 if [[ $# -eq 0 ]]; then
@@ -55,5 +58,4 @@ do
 		echo "pass"
 	fi
 done
-
 

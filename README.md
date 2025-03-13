@@ -2,6 +2,11 @@
 majia tool package
 
 
+## curls.sh
+
+使用curl进行批量下载，省去参数设置。
+
+
 ## ffbili.py
 
 使用`ffmpeg`处理`bilibili`客户端缓存文件（格式为视频音频分离的`.m4s`文件），单个/批量打包为相应`.mp4`文件。

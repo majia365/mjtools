@@ -1,7 +1,7 @@
 #!/bin/sh
 
-scripts=("ffbili.py" "ffconcat.sh" "ffmp3.sh")
-destpath="/Users/zhong/bin"
+scripts=("curls.sh" "ffbili.py" "ffconcat.sh" "ffmp3.sh")
+destpath="${HOME}/bin"
 
 for script in "${scripts[@]}";
 do
@@ -15,5 +15,4 @@ do
         echo "overwrite ok"
     fi
 done
-
 
